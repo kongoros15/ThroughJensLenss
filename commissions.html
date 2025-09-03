@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Commissions • Through Jen’s Lens</title>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  
+<header class="header">
+  <nav class="nav">
+    <div class="brand"><a href="index.html">Through Jen’s Lens</a></div>
+    <div class="menu"><a href="index.html" class="">Home</a><a href="about.html" class="">About</a><a href="social.html" class="">Social</a><a href="commissions.html" class="active">Commissions</a><a href="shop.html" class="">Shop</a></div>
+  </nav>
+</header>
+  <section class="section">
+    <h1>Commission a Custom Piece</h1>
+    <p>Tell me your idea and I’ll reply with a quote and any additional questions as soon as possible. 
+    <em>*Requests under 2 weeks may incur a rush fee (case-by-case).</em></p>
+
+    <form id="commissionForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
+      <label>Name
+        <input type="text" name="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+
+      <fieldset>
+        <legend>Size (inches)</legend>
+        <select name="size">
+          <option>4x4</option>
+          <option>4x6</option>
+          <option>5x7</option>
+          <option>8x8</option>
+          <option>8x10</option>
+          <option>Custom</option>
+        </select>
+        <input type="text" name="custom_size" placeholder="If Custom, enter dimensions">
+      </fieldset>
+
+      <fieldset>
+        <legend>Medium(s)</legend>
+        <label><input type="checkbox" name="mediums" value="pencil"> Pencil</label>
+        <label><input type="checkbox" name="mediums" value="bw_ink"> Black & White Ink</label>
+        <label><input type="checkbox" name="mediums" value="color_ink"> Color Ink</label>
+        <label><input type="checkbox" name="mediums" value="markers"> Color Markers</label>
+        <label><input type="checkbox" name="mediums" value="acrylic"> Acrylic Paint</label>
+        <label><input type="checkbox" name="mediums" value="oil_pastels"> Oil Pastels</label>
+        <label><input type="checkbox" name="mediums" value="charcoal"> Charcoal</label>
+        <label><input type="checkbox" name="mediums" value="color_pencils"> Color Pencils</label>
+        <label><input type="checkbox" name="mediums" value="mixed"> Mixed Media / Other</label>
+        <input type="text" name="custom_medium" placeholder="If other, please specify">
+      </fieldset>
+
+      <fieldset>
+        <legend>Canvas Type</legend>
+        <label><input type="radio" name="canvas" value="paper"> Paper</label>
+        <label><input type="radio" name="canvas" value="canvas"> Canvas</label>
+        <label><input type="radio" name="canvas" value="record"> Record</label>
+        <label><input type="radio" name="canvas" value="book"> Book</label>
+        <label><input type="radio" name="canvas" value="skateboard"> Skateboard Deck</label>
+        <label><input type="radio" name="canvas" value="other"> Other</label>
+        <input type="text" name="custom_canvas" placeholder="If other, please specify">
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Features</legend>
+        <label><input type="checkbox" name="features" value="celebratory"> Celebratory phrase (calligraphy +$5)</label>
+        <label><input type="checkbox" name="features" value="custom_note"> Custom note/phrase (calligraphy +$10)</label>
+        <input type="text" name="phrase_location" placeholder="Placement (front, corner, back, etc.)">
+      </fieldset>
+
+      <label>Reference Image (optional)
+        <input type="file" name="reference">
+      </label>
+
+      <label>Project Description
+        <textarea name="description" placeholder="Tell me about the subject, style, colors, vibe…"></textarea>
+      </label>
+
+      <label>Desired Time Frame
+        <input type="text" name="timeframe" placeholder="e.g., 3-4 weeks">
+      </label>
+
+      <label>Budget (USD)
+        <input type="text" name="budget" placeholder="Optional">
+      </label>
+
+      <input type="hidden" name="_subject" value="New Commission Request — Through Jen's Lens">
+      <input type="hidden" name="_cc" value="through.jens.lenss@gmail.com">
+      <button class="btn" type="submit">Submit Request</button>
+    </form>
+  </section>
+  
+<footer class="footer">
+  <div class="inner">© 2025 Through Jen’s Lens • All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+/* Through Jen's Lens - Minimal + Artistic */
+:root{
+  --bg: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #c26684;
+  --accent-2: #6a8ed8;
+  --soft: #f7f7fb;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';line-height:1.6}
+img{max-width:100%;display:block}
+
+.header{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);
+  backdrop-filter: blur(8px); border-bottom:1px solid #eee;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:14px 18px}
+.brand{font-weight:700;letter-spacing:.5px}
+.brand a{text-decoration:none;color:var(--ink)}
+.menu a{margin:0 10px;text-decoration:none;color:var(--ink);padding:8px 10px;border-radius:10px;transition:all .2s}
+.menu a:hover,.menu a.active{background:#f1f3f7}
+.btn{
+  display:inline-block;padding:.7rem 1.2rem;border-radius:12px;
+  background:linear-gradient(135deg, var(--accent), #e58aa7);
+  color:#fff;text-decoration:none;box-shadow:0 6px 14px rgba(194,102,132,.25);
+  transition:transform .08s ease, box-shadow .2s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(194,102,132,.28)}
+.btn:active{transform:translateY(0)}
+
+.hero{
+  background-image:url('../images/hero.jpg');
+  background-size:cover;background-position:center;
+  position:relative;color:#1f2937;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;background:rgba(255,255,255,.55);
+}
+.hero .inner{position:relative;max-width:1100px;margin:0 auto;padding:80px 18px}
+.hero h1{font-size:clamp(28px,6vw,56px);margin:0 0 10px}
+.hero p{max-width:700px;margin:0 0 18px;color:#374151}
+
+.section{max-width:1100px;margin:0 auto;padding:40px 18px}
+.grid{display:grid;gap:18px}
+.grid.gallery{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{border-radius:16px;overflow:hidden;border:1px solid #eee;background:#fff;box-shadow:0 6px 20px rgba(30,41,59,.04)}
+.card .p{padding:14px 14px 18px}
+
+.bg-pattern{background-image:url('../images/pattern.jpg');background-size:800px;}
+
+.footer{border-top:1px solid #eee;background:#fafbff}
+.footer .inner{max-width:1100px;margin:0 auto;padding:24px 18px;color:var(--muted);font-size:14px}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);z-index:100}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:82vh;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+
+/* Forms */
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:600}
+input,select,textarea{border:1px solid #e5e7eb;border-radius:10px;padding:.7rem;background:#fff}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:1px dashed #e5e7eb;border-radius:12px;padding:12px}
+legend{padding:0 8px;color:#6b7280}
+
+/* Shop cards */
+.product{display:grid;gap:8px;padding:14px}
+.product h3{margin:0}
+.price{font-weight:700}
+.opts{display:grid;gap:8px}
+.actions{margin-top:6px}
+
+/* Responsive */
+@media (max-width: 700px){
+  .menu{display:flex;gap:6px;flex-wrap:wrap}
+}
